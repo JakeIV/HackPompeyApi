@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 import requests
 import json
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Define the TMDB API endpoint and headers
 tmdb_endpoint = 'https://api.themoviedb.org/3/discover/movie'
