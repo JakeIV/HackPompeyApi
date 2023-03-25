@@ -77,7 +77,7 @@ def get_recommendations():
         # Make the API request and get the response
         response = requests.get(tmdb_endpoint, headers=tmdb_headers, params=tmdb_params)
 
-        # Parse the response and extract the top 10 recommended movies
+        # Parse the response and extract the top 5 recommended movies
         if response.status_code == 200:
             data = json.loads(response.text)
             results = data['results']
