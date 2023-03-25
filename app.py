@@ -46,7 +46,7 @@ def get_genre_ids(genre_names):
             for genre in genres:
                 if genre['name'].lower() == genre_name.lower():
                     genre_ids.append(genre['id'])
-                    genredict[genre_name] = genre['id']
+                    genredict[genre['id']] = genre_name
                     break
         return genre_ids, genredict
     else:
